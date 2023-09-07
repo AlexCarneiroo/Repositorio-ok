@@ -41,7 +41,7 @@ export const name = styled.h1`
         content: '/>';
     }
 
-    @media (max-width:410px){
+    @media (max-width:420px){
         font-size: 1.1rem;
     }
 
@@ -61,7 +61,7 @@ export const menu = styled.div`
     text-align: center;
 
 
-    @media (max-width:900px){
+    @media (max-width:985px){
         display: none;
     }
 `;
@@ -114,7 +114,7 @@ export const incon = styled.i`
 export const menuRespom = styled.div`
     cursor: pointer;
 
-    @media (min-width:900px){
+    @media (min-width:985px){
         display: none;
     }
 `;
@@ -139,7 +139,7 @@ export const menuRespomRedes = styled.div`
         src: url(${Mont});
     }
 
-    @media (min-width:900px){
+    @media (min-width:980px){
         display: none;
     }
     

@@ -127,6 +127,7 @@ export const h1 = styled.h1`
     color: #1A237E ;
     font-family: 'Caveat';
     margin: 0 0 10px 0;
+    font-size: 2.3rem;
 
     @font-face {
         font-family: 'Caveat' ;
@@ -194,6 +195,7 @@ export const BtnVoltar = styled.button`
     right: 0;
     bottom: 0;
     margin: 0 20px 20px 0;
+    z-index: 1;
 
     &:hover{
         color: rgb(232, 234, 246);
@@ -277,7 +279,8 @@ export const optios = styled.div`
 `;
 
 export const titulo = styled.h1`
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    padding: 10px 0;
     color: #212121;
 `;
 export const spp = styled.span`

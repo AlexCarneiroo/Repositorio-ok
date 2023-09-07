@@ -38,9 +38,9 @@ import cert6 from '../../logos e imgs/certificados/certificado_5163342.jpg'
 
 //Portifolios
 
-import img1 from '../../logos e imgs/jogo da velha.png'
-import img2Imc from '../../logos e imgs/imgs de projetos/IMG1.png'
-import imageProgetojogo from '../../logos e imgs/imgs de projetos/screencapture-127-0-0-1-5500-index-html-2023-08-22-18_59_41.png'
+import img1 from '../../logos e imgs/imgs de projetos/JogodaCoba.png'
+import img2Imc from '../../logos e imgs/imgs de projetos/CalculadoraIMC.png'
+import imageProgetojogo from '../../logos e imgs/imgs de projetos/JogoPPT.png'
 import cronometro from '../../logos e imgs/imgs de projetos/cronometro.png'
 
 import { useEffect , useState } from 'react';
@@ -219,23 +219,24 @@ export const Main = ()=>{
                         <C.porti>
                             <img src={img1} className='img1' alt="" />
                             <C.optios>
-                                <C.titulo>Jogo da Velha</C.titulo>
+                                <C.titulo>Jogo da Cobra</C.titulo>
                                 <C.spp>
-                                    Lorem ipsum dolor sit amet. Et odio velit et molestiae rerum a veritatis galisum sit illo rerum. Qui veniam neque id corporis nihil ad adipisci nihil non animi omnis. Aut recusandae aspernatur eos numquam tempora et  
+                                    Projeto Muito legal e divertido com muita logica usando o Canvas muito bom!!!
+                                    Com a opção de escolher a dificudade e armazenar seu record.
                                 </C.spp>
 
                                     <C.titulo>Tecnologias Utilizadas</C.titulo>
                                 <C.texUse>
-                                    <img src={react} alt="" width={50} />
-                                    <img src={ty} alt="" width={50} />
+                                    <img src={html} alt="" width={50} />
                                     <img src={javaScript} alt="" width={50} />
                                 </C.texUse>
 
-                                <C.irProject className='btnEfeito'>
-                                    Ver Projeto
-                                    
-                                    <FaShare className='incone'/>
-                                </C.irProject>
+                                <C.linkProjeto href='https://jogo1-0-alexcarneiroo.vercel.app/' target='_blank'>
+                                    <C.irProject className='btnEfeito'>
+                                        Ver Projeto
+                                        <FaShare className='incone'/>
+                                    </C.irProject>
+                                </C.linkProjeto>
 
                             </C.optios>
                         </C.porti>
@@ -268,11 +269,13 @@ export const Main = ()=>{
                                     <img src={javaScript} alt="" width={50}/>
                                 </C.texUse>
 
-                                <C.irProject className='btnEfeito'>
-                                    Ver Projeto
-                                    
-                                    <FaShare className='incone'/>
-                                </C.irProject>
+
+                                <C.linkProjeto href='https://calculadoradeimc-gamma.vercel.app/' target='_blank'>
+                                    <C.irProject className='btnEfeito'>
+                                        Ver Projeto   
+                                        <FaShare className='incone'/>
+                                    </C.irProject>
+                                </C.linkProjeto>
 
                             </C.optios>
                                 <img  src={img2Imc} className='img1' alt="" />
@@ -297,11 +300,13 @@ export const Main = ()=>{
                                     <img src={javaScript} alt="" width={50} />
                                 </C.texUse>
 
-                                <C.irProject className='btnEfeito'>
-                                    Ver Projeto
-                                    
-                                    <FaShare className='incone'/>
-                                </C.irProject>
+                                <C.linkProjeto href='https://pedra-papel-tesoura-seven.vercel.app/' target='_blank'>
+                                    <C.irProject className='btnEfeito'>
+                                        Ver Projeto
+                                        
+                                        <FaShare className='incone'/>
+                                    </C.irProject>
+                                </C.linkProjeto>
 
                             </C.optios>
                         </C.porti>
