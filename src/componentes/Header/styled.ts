@@ -122,17 +122,20 @@ export const menuRespom = styled.div`
 export const imgMenu = styled.img``;
 
 
-export const menuRespomRedes = styled.div`
-    display: flex;
+export const menuRespomRedes = styled.div<{$respom?:boolean}>`
+    
     width: 100%;
+    height: ${props => props.$respom ? '200px' : '0px'};
     background-color: rgba(48, 63, 159,.5);   
     flex-direction: column;
-    padding: 10px;
+    padding: ${props => props.$respom ? '10px' : '0px'};
     align-items:center;
     position: absolute;
     top: 50px;
     font-family: 'Montserrat';
-
+    display: flex;
+    transition: all .3s ease-in-out;
+    overflow: hidden;
 
     @font-face {
         font-family: 'Montserrat' ;

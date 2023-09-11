@@ -99,12 +99,18 @@ export const redes = styled.div`
     display: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
 `;
 
 export const tecImg = styled.img`
     transition: .2s ease-in;
     margin: 10px 0 40px;
+
+    @media (max-width:750px) {
+        margin: 10px 20px;
+    }
+
     &:hover{
         transform: scale(1.1);
         cursor: pointer;

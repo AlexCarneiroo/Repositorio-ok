@@ -64,8 +64,7 @@ export const Headers =()=>{
             <C.menuRespom onClick={handlClickMenu}>
                 <C.imgMenu src={logMenu} alt="" width={25}/>
             </C.menuRespom>
-            {menu &&
-                <C.menuRespomRedes>
+                <C.menuRespomRedes $respom={menu}>
                     <C.b>Home</C.b>
                     <br />
                     <Link to={'parte'}><C.b>Sobre Min</C.b></Link>
@@ -74,7 +73,6 @@ export const Headers =()=>{
                     <br />
                     <Link to='portifolio'><C.b>Portifolios</C.b></Link>
                 </C.menuRespomRedes>
-            }
         </C.container>
 
     )
