@@ -354,9 +354,7 @@ export const Main = ()=>{
                                 <C.optios>
                                     <C.titulo>Catalogo de Filmes Lançamentos</C.titulo>
                                     <C.spp>
-                                        Esse é um projeto de cronometro moderno e simples de usar bom para fazer um Pomodoro ou algo do tipo
-                                        <br />
-                                        Feito com HTML e CSS E JAVASCRIPT!!!
+                                        Um Projeto que Pega Todos Filmes Lançado Atualmente utilizando uma API Desenvolvido com ReactJs e TypeScript
                                     </C.spp>
                                             <C.titulo>Tecnologias Utilizadas</C.titulo>
                                     <C.texUse>
