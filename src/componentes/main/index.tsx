@@ -42,6 +42,7 @@ import img1 from '../../logos e imgs/imgs de projetos/JogodaCoba.png'
 import img2Imc from '../../logos e imgs/imgs de projetos/CalculadoraIMC.png'
 import imageProgetojogo from '../../logos e imgs/imgs de projetos/JogoPPT.png'
 import cronometro from '../../logos e imgs/imgs de projetos/cronometro.png'
+import catalogo from '../../logos e imgs/imgs de projetos/catalogo.png'
 
 import { useEffect , useState } from 'react';
 
@@ -321,32 +322,60 @@ export const Main = ()=>{
                     {verMais &&
                     <>
                     <hr />                 
-                    <C.portifolios>
-                        <C.porti>
-                            <C.optios>
-                                <C.titulo>Cronometro Moderno</C.titulo>
-                                <C.spp>
-                                    Esse é um projeto de cronometro moderno e simples de usar bom para fazer um Pomodoro ou algo do tipo
-                                    <br />
-                                    Feito com HTML e CSS E JAVASCRIPT!!!
-                                </C.spp>
-                                        <C.titulo>Tecnologias Utilizadas</C.titulo>
-                                <C.texUse>
-                                    <img src={html} alt="" width={50} />
-                                    <img src={javaScript} alt="" width={50} />
-                                </C.texUse>
+                        <C.portifolios>
+                            <C.porti>
+                                <C.optios>
+                                    <C.titulo>Cronometro Moderno</C.titulo>
+                                    <C.spp>
+                                        Esse é um projeto de cronometro moderno e simples de usar bom para fazer um Pomodoro ou algo do tipo
+                                        <br />
+                                        Feito com HTML e CSS E JAVASCRIPT!!!
+                                    </C.spp>
+                                            <C.titulo>Tecnologias Utilizadas</C.titulo>
+                                    <C.texUse>
+                                        <img src={html} alt="" width={50} />
+                                        <img src={javaScript} alt="" width={50} />
+                                    </C.texUse>
 
-                                <C.linkProjeto href="https://cronometroomoderno.netlify.app/" target='_black'>
-                                    <C.irProject className='btnEfeito'>
-                                        Ver Projeto 
-                                        <FaShare className='incone'/>
-                                    </C.irProject>
-                                </C.linkProjeto>
+                                    <C.linkProjeto href="https://cronometroomoderno.netlify.app/" target='_black'>
+                                        <C.irProject className='btnEfeito'>
+                                            Ver Projeto 
+                                            <FaShare className='incone'/>
+                                        </C.irProject>
+                                    </C.linkProjeto>
 
-                            </C.optios>
-                            <img  src={cronometro} className='img1' alt="" />
-                        </C.porti>
-                    </C.portifolios>                    
+                                </C.optios>
+                                <img  src={cronometro} className='img1' alt="" />
+                            </C.porti>
+                        </C.portifolios>                    
+                    <hr />                 
+                        <C.portifolios>
+                            <C.porti>
+                                <C.optios>
+                                    <C.titulo>Catalogo de Filmes Lançamentos</C.titulo>
+                                    <C.spp>
+                                        Esse é um projeto de cronometro moderno e simples de usar bom para fazer um Pomodoro ou algo do tipo
+                                        <br />
+                                        Feito com HTML e CSS E JAVASCRIPT!!!
+                                    </C.spp>
+                                            <C.titulo>Tecnologias Utilizadas</C.titulo>
+                                    <C.texUse>
+                                        <img src={react} alt="" width={50} />
+                                        <img src={ty} alt="" width={50} />
+
+                                    </C.texUse>
+
+                                    <C.linkProjeto href="https://catalogo-filmes-react-js-api.vercel.app/" target='_black'>
+                                        <C.irProject className='btnEfeito'>
+                                            Ver Projeto 
+                                            <FaShare className='incone'/>
+                                        </C.irProject>
+                                    </C.linkProjeto>
+
+                                </C.optios>
+                                <img  src={catalogo} className='imgCatalogo' alt=""  />
+                            </C.porti>
+                        </C.portifolios>                    
                 </>
                 }
                 </C.subiContainer>
