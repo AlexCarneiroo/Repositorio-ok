@@ -27,6 +27,10 @@ import do2 from '../../logos e imgs/tecnologias/download.png'
 import html from '../../logos e imgs/tecnologias/html5-e-css3.jpg'
 import gitHub from '../../logos e imgs/tecnologias/download (1).png'
 import taiw from '../../logos e imgs/tecnologias/tailwindcss.jpg'
+import rails from '../../logos e imgs/tecnologias/pngwing.com.png'
+import ruby from '../../logos e imgs/tecnologias/pngwing.com (6).png'
+
+
 
 //Certificados
 import cert1 from '../../logos e imgs/certificados/certificado_1828079.jpg'
@@ -36,13 +40,14 @@ import cert4 from '../../logos e imgs/certificados/typeScript.jpg'
 import cert5 from '../../logos e imgs/certificados/certificado_4778195 (1).jpg'
 import cert6 from '../../logos e imgs/certificados/certificado_5163342.jpg'
 
-//Portifolios
-
+//Portifolios img
 import img1 from '../../logos e imgs/imgs de projetos/JogodaCoba.png'
 import img2Imc from '../../logos e imgs/imgs de projetos/CalculadoraIMC.png'
 import imageProgetojogo from '../../logos e imgs/imgs de projetos/JogoPPT.png'
 import cronometro from '../../logos e imgs/imgs de projetos/cronometro.png'
 import catalogo from '../../logos e imgs/imgs de projetos/catalogo.png'
+import pomodoro from '../../logos e imgs/imgs de projetos/imgPomodoro.png'
+
 
 import { useEffect , useState } from 'react';
 
@@ -108,6 +113,8 @@ export const Main = ()=>{
                 <C.tecImg src={react} alt="" width={55}/>
                 <C.tecImg src={gitHub} alt="" width={55}/>
                 <C.tecImg src={taiw} alt="" width={55}/>
+                <C.tecImg src={rails} alt="" width={55}/>
+                <C.tecImg src={ruby} alt="" width={55}/>
             </C.redes>
 
             <C.Container>
@@ -126,7 +133,7 @@ export const Main = ()=>{
                                     <br />
                                     <br />
                                     <C.h2>Profissional</C.h2>
-                                    <C.detalhes>Tenho Conhecimento Avançado na Lingua JavaScript e Python, e em liguagem de leituras HTML5 e CSS e alguns framework como ReactJs Tenho conhecimento em TypeScript e outras Bibliotecas , Cursei na empresa B7web e na Danki Code...</C.detalhes>
+                                    <C.detalhes>Tenho Conhecimento Avançado na Lingua JavaScript e Ruby, e em liguagem de leituras HTML5 e CSS e alguns framework como ReactJs e Rails Tenho conhecimento em TypeScript e outras Bibliotecas , Cursei na empresa B7web e na Danki Code...</C.detalhes>
                                 </C.sobreRight>
                             </C.divisao>
                         </Element>
@@ -285,12 +292,12 @@ export const Main = ()=>{
                     <hr />
                     <C.portifolios>
                         <C.porti>
-                            <img  src={imageProgetojogo} className='img1' alt="" />
+                            <img  src={pomodoro} className='img1' alt="" />
 
                             <C.optios>
-                                <C.titulo>Pedra Papel Tesoura JS</C.titulo>
+                                <C.titulo>Pomodoro Timer</C.titulo>
                                 <C.spp>
-                                    Um Joguinho Classico De Pedra Papel e Tesoura Simples Mais Com Muita Logica!!!
+                                    Um pomodoro super intuitivo com metodo de configuraçãoes com metodo de pausa super facil de usar!!!
                                     <br />
                                     Feito com HTML e CSS E JAVASCRIPT!!!
                                 </C.spp>
@@ -301,7 +308,7 @@ export const Main = ()=>{
                                     <img src={javaScript} alt="" width={50} />
                                 </C.texUse>
 
-                                <C.linkProjeto href='https://pedra-papel-tesoura-seven.vercel.app/' target='_blank'>
+                                <C.linkProjeto href='https://pomodoro-js-opal.vercel.app/' target='_blank'>
                                     <C.irProject className='btnEfeito'>
                                         Ver Projeto
                                         
@@ -374,7 +381,39 @@ export const Main = ()=>{
                                 <img  src={catalogo} className='imgCatalogo' alt=""  />
                             </C.porti>
                         </C.portifolios>                    
+                
+                    <hr />
+                    <C.portifolios>
+                        <C.porti>
+                            <img  src={imageProgetojogo} className='img1' alt="" />
+
+                            <C.optios>
+                                <C.titulo>Pedra Papel Tesoura JS</C.titulo>
+                                <C.spp>
+                                    Um Joguinho Classico De Pedra Papel e Tesoura Simples Mais Com Muita Logica!!!
+                                    <br />
+                                    Feito com HTML e CSS E JAVASCRIPT!!!
+                                </C.spp>
+
+                                    <C.titulo>Tecnologias Utilizadas</C.titulo>
+                                <C.texUse>
+                                    <img src={html} alt="" width={50} />
+                                    <img src={javaScript} alt="" width={50} />
+                                </C.texUse>
+
+                                <C.linkProjeto href='https://pedra-papel-tesoura-seven.vercel.app/' target='_blank'>
+                                    <C.irProject className='btnEfeito'>
+                                        Ver Projeto
+                                        
+                                        <FaShare className='incone'/>
+                                    </C.irProject>
+                                </C.linkProjeto>
+
+                            </C.optios>
+                        </C.porti>
+                    </C.portifolios>
                 </>
+
                 }
                 </C.subiContainer>
             </C.Container>
