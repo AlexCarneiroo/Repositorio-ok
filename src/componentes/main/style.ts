@@ -276,7 +276,7 @@ export const optios = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 10px 20px;
+    padding: 0px 20px;
     position: relative;
 
     @media (max-width:850px) {
@@ -301,7 +301,7 @@ export const spp = styled.span`
 `;
 
 export const texUse = styled.div`
-    margin: 15px 0 20px 0;
+    margin: 15px 0 10px 0;
     display: flex;
     @media (max-width:850px) {
         align-items:center;
