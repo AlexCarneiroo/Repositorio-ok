@@ -39,7 +39,7 @@ import cert3 from '../../logos e imgs/certificados/certificado_6328407.jpg'
 import cert4 from '../../logos e imgs/certificados/typeScript.jpg'
 import cert5 from '../../logos e imgs/certificados/certificado_4778195 (1).jpg'
 import cert6 from '../../logos e imgs/certificados/certificado_5163342.jpg'
-
+import cert7 from '../../logos e imgs/certificados/Certificado JavaScript DC_page-0001.jpg'
 //Portifolios img
 import img1 from '../../logos e imgs/imgs de projetos/JogodaCoba.png'
 import img2Imc from '../../logos e imgs/imgs de projetos/CalculadoraIMC.png'
@@ -109,8 +109,8 @@ export const Main = ()=>{
                 <C.tecImg src={html} alt="" width={55}/>
                 <C.tecImg src={do1} alt="" width={70}/>
                 <C.tecImg src={do2} alt="" width={55}/>
-                <C.tecImg src={node} alt="" width={55}/>
-                <C.tecImg src={react} alt="" width={55}/>
+{/*                 <C.tecImg src={node} alt="" width={55}/>
+ */}            <C.tecImg src={react} alt="" width={55}/>
                 <C.tecImg src={gitHub} alt="" width={55}/>
                 <C.tecImg src={taiw} alt="" width={55}/>
                 <C.tecImg src={rails} alt="" width={55}/>
@@ -207,6 +207,15 @@ export const Main = ()=>{
                                 <C.detalh>
                                     <C.ss>B7web</C.ss>
                                     <C.h3 className='taiCSS'>TailwindCSS</C.h3>
+                                </C.detalh>
+                            </C.slide>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <C.slide>
+                                <img src={cert7} alt="" width={350} className='imagi'/>
+                                <C.detalh>
+                                    <C.ss>Danki Code</C.ss>
+                                    <C.h3 className='java'>JavaScript</C.h3>
                                 </C.detalh>
                             </C.slide>
                         </SwiperSlide>
