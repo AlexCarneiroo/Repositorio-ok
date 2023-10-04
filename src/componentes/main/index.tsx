@@ -108,8 +108,7 @@ export const Main = ()=>{
                 <C.tecImg src={html} alt="" width={55}/>
                 <C.tecImg src={do1} alt="" width={70}/>
                 <C.tecImg src={do2} alt="" width={55}/>
-{/*                 <C.tecImg src={node} alt="" width={55}/>
- */}            <C.tecImg src={react} alt="" width={55}/>
+                <C.tecImg src={react} alt="" width={55}/>
                 <C.tecImg src={gitHub} alt="" width={55}/>
                 <C.tecImg src={taiw} alt="" width={55}/>
                 <C.tecImg src={rails} alt="" width={55}/>
