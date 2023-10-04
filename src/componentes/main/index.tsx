@@ -90,7 +90,7 @@ export const Main = ()=>{
                 <C.Container>
                     <C.HomeLeft>
                         <C.title>Desenvolvedor Front-End...</C.title>
-                        <C.span>Olá eu Sou O <C.bold>Alex Dos Santos Carneiro</C.bold> e Esse é o meu Portifoli Seja Muito Bem Vindo...</C.span>
+                        <C.span>Olá eu Sou O <C.bold>Alex Dos Santos Carneiro</C.bold> e Esse é o meu Portfolio Seja Muito Bem Vindo...</C.span>
                         <br />
                         <br />
                         <C.span>Sou Desenvolvedor Front-End A 1 Ano e Meio E Tenho Conhecimentos em <C.bold>JavaScript , ReactJs , TypeScript e NodeJs</C.bold> e Algumas Bibliotecas...</C.span>
@@ -121,7 +121,7 @@ export const Main = ()=>{
 
                     <C.contraContainer>
                         <Element name="parte">
-                            <C.h1>Sobre min</C.h1>
+                            <C.h1>Sobre mim</C.h1>
                             <hr />
                             <C.divisao>
                                 <C.sobreLeft>
@@ -129,11 +129,11 @@ export const Main = ()=>{
                                 </C.sobreLeft>
                                 <C.sobreRight>
                                     <C.h2>Pessoal</C.h2>
-                                    <C.detalhes>Sou uma Pessoa muito Dedicada No que Faço ,  Tenho o Abito de Ter uma Rotina Fazer sempre Em ordem, Gosto muito de Ler Livros E Estudar passo a metade do meu tempo Estudando!!!</C.detalhes>
+                                    <C.detalhes>Sou uma Pessoa muito Dedicada No que Faço ,  Tenho o Habito de Ter uma Rotina Fazer sempre Em ordem, Gosto muito de Ler Livros E Estudar , passo a metade do meu tempo Estudando!!!</C.detalhes>
                                     <br />
                                     <br />
                                     <C.h2>Profissional</C.h2>
-                                    <C.detalhes>Tenho Conhecimento Avançado na Lingua JavaScript e Ruby, e em liguagem de leituras HTML5 e CSS e alguns framework como ReactJs e Rails Tenho conhecimento em TypeScript e outras Bibliotecas , Cursei na empresa B7web e na Danki Code...</C.detalhes>
+                                    <C.detalhes>Tenho Conhecimento Avançado na Lingua JavaScript e Ruby, e em liguagem de leituras HTML5 e CSS , alguns framework como ReactJs e Rail , Tenho conhecimento em TypeScript e outras Bibliotecas , Cursei na empresa B7web e na Danki Code...</C.detalhes>
                                 </C.sobreRight>
                             </C.divisao>
                         </Element>
@@ -144,7 +144,7 @@ export const Main = ()=>{
 
             <Element name='certificado'>
             <C.certificados>
-                <C.h1>Certificaçoes</C.h1>
+                <C.h1>Certificações</C.h1>
                 <hr />
                 <C.carrosel>
                     <Swiper
@@ -228,7 +228,7 @@ export const Main = ()=>{
               
                 <C.subiContainer>
                     <Element name='portifolio'>
-                        <C.h1>Portifolios</C.h1>
+                        <C.h1>Portfolio</C.h1>
                     </Element>
                     <hr />
                      
