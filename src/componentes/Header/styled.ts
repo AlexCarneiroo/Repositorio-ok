@@ -160,9 +160,7 @@ export const b = styled.span`
 `;
 
 
-export const Link = styled.a`
-
-`;
+export const Link = styled.a``;
 
 
 

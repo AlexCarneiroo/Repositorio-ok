@@ -3,7 +3,6 @@ import logMenu from '../../logos e imgs/cardapio.png'
 import  { useEffect, useState } from 'react';
 import {FaLinkedinIn , FaGithub,FaWhatsapp } from "react-icons/fa";
 import './navbar.css';
-import {Link}  from 'react-scroll';
 
 interface Types {
     teste?:any,

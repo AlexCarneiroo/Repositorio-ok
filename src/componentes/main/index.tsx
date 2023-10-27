@@ -1,7 +1,6 @@
 import * as C from '../main/style'
-import {useRef} from 'react'
-import { Link, Element } from 'react-scroll';
-import {FaChevronUp , FaShare , FaAngleDown} from 'react-icons/fa'
+import { useRef } from 'react'
+import { FaChevronUp, FaShare, FaAngleDown } from 'react-icons/fa'
 // Carrosel
 import 'swiper/css';
 import 'swiper/css/navigation'
@@ -9,8 +8,8 @@ import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 import './styles.css'
 
-import { Swiper , SwiperSlide } from 'swiper/react'
-import { Pagination , Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Navigation } from 'swiper/modules';
 
 
 
@@ -51,63 +50,63 @@ import pomodoro from '../../logos e imgs/imgs de projetos/imgPomodoro.png'
 import playerMusic from '../../logos e imgs/imgs de projetos/screencapture-reprodutor-music-vercel-app-2023-10-23-07_03_54.png'
 
 
-import { useEffect , useState } from 'react';
+import { useEffect, useState } from 'react';
 
 interface Types {
-    prop?:any,
+    prop?: any,
     sobree?: any,
-    portifolio?:any
+    portifolio?: any
 }
 
-export const Main: React.FC<Types> = ({prop , sobree , portifolio})=>{
+export const Main: React.FC<Types> = ({ prop, sobree, portifolio }) => {
 
 
 
-    const [verMais , setVermais] = useState(false)
+    const [verMais, setVermais] = useState(false)
 
-    const handlClick =()=>{
+    const handlClick = () => {
         setVermais(true)
     }
 
 
     const [isScrrol, setScrool] = useState(false)
 
-    useEffect(()=>{
-        const handlScrool = ()=>{
-            setScrool(window.scrollY >=80)
+    useEffect(() => {
+        const handlScrool = () => {
+            setScrool(window.scrollY >= 80)
         }
 
-        window.addEventListener('scroll' , handlScrool)
+        window.addEventListener('scroll', handlScrool)
 
-        return ()=>{
+        return () => {
             window.removeEventListener('scroll', handlScrool)
         }
 
-        
 
-    },[])
 
-    const handlVoltarTop = ()=>{
+    }, [])
+
+    const handlVoltarTop = () => {
         window.scroll({
-            top:0,
-            behavior:'smooth'
+            top: 0,
+            behavior: 'smooth'
         })
     }
 
 
 
-    
+
     const certiEvent = useRef<HTMLDivElement>(null)
     const elemento = useRef<HTMLDivElement>(null)
     const portifo = useRef<HTMLDivElement>(null)
-    
-    useEffect(()=>{
+
+    useEffect(() => {
         prop(certiEvent)
         sobree(elemento)
         portifolio(portifo)
-    },[])
-    const handlSobreMin = ()=>{
-        if (elemento.current){
+    }, [])
+    const handlSobreMin = () => {
+        if (elemento.current) {
             const offsetTop = elemento.current.offsetTop;
             window.scroll({
                 top: offsetTop - 30,
@@ -115,110 +114,109 @@ export const Main: React.FC<Types> = ({prop , sobree , portifolio})=>{
             });
         }
     }
-    
 
- 
 
-    return(
+
+
+    return (
         <C.main>
             {isScrrol &&
                 <C.BtnVoltar onClick={handlVoltarTop}>
-                    <FaChevronUp/>
+                    <FaChevronUp />
                 </C.BtnVoltar>
             }
-            <Element name="voltar">
-                <C.Container>
-                    <C.HomeLeft>
-                        <C.title>Desenvolvedor Front-End...</C.title>
-                        <C.span>Olá eu Sou O <C.bold>Alex Dos Santos Carneiro</C.bold> e Esse é o meu Portfolio Seja Muito Bem Vindo...</C.span>
-                        <br />
-                        <br />
-                        <C.span>Sou Desenvolvedor Front-End A 1 Ano e Meio E Tenho Conhecimentos em <C.bold>JavaScript , ReactJs , TypeScript e NodeJs</C.bold> e Algumas Bibliotecas...</C.span>
-                        <C.p>Venha Conhecer Mais <C.link onClick={handlSobreMin}>Sobre Min...</C.link></C.p>
-                    </C.HomeLeft>
-                    <C.HomeRight>
-                        <C.img src={uselogo} alt="" width={400}/>
-                    </C.HomeRight>
-                </C.Container>
-            </Element>
+
+            <C.Container>
+                <C.HomeLeft>
+                    <C.title>Desenvolvedor Front-End...</C.title>
+                    <C.span>Olá eu Sou O <C.bold>Alex Dos Santos Carneiro</C.bold> e Esse é o meu Portfolio Seja Muito Bem Vindo...</C.span>
+                    <br />
+                    <br />
+                    <C.span>Sou Desenvolvedor Front-End A 1 Ano e Meio E Tenho Conhecimentos em <C.bold>JavaScript , ReactJs , TypeScript e NodeJs</C.bold> e Algumas Bibliotecas...</C.span>
+                    <C.p>Venha Conhecer Mais <C.link onClick={handlSobreMin}>Sobre Min...</C.link></C.p>
+                </C.HomeLeft>
+                <C.HomeRight>
+                    <C.img src={uselogo} alt="" width={400} />
+                </C.HomeRight>
+            </C.Container>
+
 
             <C.redes>
                 <C.tecConte>
-                    <C.tecImg src={javaScript} alt="" width={55}/>
+                    <C.tecImg src={javaScript} alt="" width={55} />
                     <C.nameTec>JavaScript</C.nameTec>
                 </C.tecConte>
                 <C.tecConte>
-                    <C.tecImg src={nodejs} alt='image' width={55}/>
+                    <C.tecImg src={nodejs} alt='image' width={55} />
                     <C.nameTec>NodeJs</C.nameTec>
                 </C.tecConte>
                 <C.tecConte>
-                <C.tecImg src={git} alt="" width={55}/>
+                    <C.tecImg src={git} alt="" width={55} />
                     <C.nameTec>Git</C.nameTec>
                 </C.tecConte>
                 <C.tecConte>
-                    <C.tecImg src={ty} alt="" width={55}/>
+                    <C.tecImg src={ty} alt="" width={55} />
                     <C.nameTec>TypeScript</C.nameTec>
                 </C.tecConte>
                 <C.tecConte>
-                    <C.tecImg src={html} alt="" width={55}/>
+                    <C.tecImg src={html} alt="" width={55} />
                     <C.nameTec>HTML-CSS</C.nameTec>
                 </C.tecConte>
                 <C.tecConte>
-                    <C.tecImg src={do1} alt="" width={70}/>
+                    <C.tecImg src={do1} alt="" width={70} />
                     <C.nameTec>MySQL</C.nameTec>
                 </C.tecConte>
                 <C.tecConte>
 
-                <C.tecImg src={do2} alt="" width={55}/>
+                    <C.tecImg src={do2} alt="" width={55} />
                     <C.nameTec>Styled-Componets</C.nameTec>
                 </C.tecConte>
                 <C.tecConte>
-                    <C.tecImg src={react} alt="" width={55}/>
+                    <C.tecImg src={react} alt="" width={55} />
                     <C.nameTec>React</C.nameTec>
                 </C.tecConte>
                 <C.tecConte>
-                    <C.tecImg src={gitHub} alt="" width={55}/>
+                    <C.tecImg src={gitHub} alt="" width={55} />
                     <C.nameTec>gitHub</C.nameTec>
                 </C.tecConte>
                 <C.tecConte>
-                    <C.tecImg src={taiw} alt="" width={55}/>
+                    <C.tecImg src={taiw} alt="" width={55} />
                     <C.nameTec>Tailwind CSS</C.nameTec>
                 </C.tecConte>
                 <C.tecConte>
-                    <C.tecImg src={rails} alt="" width={55}/>
+                    <C.tecImg src={rails} alt="" width={55} />
                     <C.nameTec>Rails</C.nameTec>
                 </C.tecConte>
                 <C.tecConte>
-                    <C.tecImg src={ruby} alt="" width={55}/>
+                    <C.tecImg src={ruby} alt="" width={55} />
                     <C.nameTec>Ruby</C.nameTec>
                 </C.tecConte>
-                  
+
             </C.redes>
 
             <C.Container>
 
-                    <C.contraContainer ref={elemento} id='sobremin'>
-                            <C.h1>Sobre mim</C.h1>
-                            <hr />
-                            <C.divisao>
-                                <C.sobreLeft>
-                                    <C.img src={useimg} alt='' width={350}/>
-                                </C.sobreLeft>
-                                <C.sobreRight>
-                                    <C.h2>Pessoal</C.h2>
-                                    <C.detalhes>Sou uma Pessoa muito Dedicada No que Faço ,  Tenho o Habito de Ter uma Rotina Fazer sempre Em ordem, Gosto muito de Ler Livros E Estudar , passo a metade do meu tempo Estudando!!!</C.detalhes>
-                                    <br />
-                                    <br />
-                                    <C.h2>Profissional</C.h2>
-                                    <C.detalhes>Tenho Conhecimento Avançado na Lingua JavaScript e Ruby, e em liguagem de leituras HTML5 e CSS , alguns framework como ReactJs e Rail , Tenho conhecimento em TypeScript e outras Bibliotecas , Cursei na empresa B7web e na Danki Code...</C.detalhes>
-                                </C.sobreRight>
-                            </C.divisao>
-                    </C.contraContainer>
+                <C.contraContainer ref={elemento} id='sobremin'>
+                    <C.h1>Sobre mim</C.h1>
+                    <hr />
+                    <C.divisao>
+                        <C.sobreLeft>
+                            <C.img src={useimg} alt='' width={350} />
+                        </C.sobreLeft>
+                        <C.sobreRight>
+                            <C.h2>Pessoal</C.h2>
+                            <C.detalhes>Sou uma Pessoa muito Dedicada No que Faço ,  Tenho o Habito de Ter uma Rotina Fazer sempre Em ordem, Gosto muito de Ler Livros E Estudar , passo a metade do meu tempo Estudando!!!</C.detalhes>
+                            <br />
+                            <br />
+                            <C.h2>Profissional</C.h2>
+                            <C.detalhes>Tenho Conhecimento Avançado na Lingua JavaScript e Ruby, e em liguagem de leituras HTML5 e CSS , alguns framework como ReactJs e Rail , Tenho conhecimento em TypeScript e outras Bibliotecas , Cursei na empresa B7web e na Danki Code...</C.detalhes>
+                        </C.sobreRight>
+                    </C.divisao>
+                </C.contraContainer>
             </C.Container>
 
-            
 
-            <Element name='certificado'>
+
             <C.certificados ref={certiEvent}>
                 <C.h1>Certificações</C.h1>
                 <hr />
@@ -226,15 +224,15 @@ export const Main: React.FC<Types> = ({prop , sobree , portifolio})=>{
                     <Swiper
                         grabCursor
                         slidesPerView={1}
-                        pagination={{dynamicBullets: true,}}
+                        pagination={{ dynamicBullets: true, }}
                         navigation
-                        modules={[Pagination , Navigation]}
+                        modules={[Pagination, Navigation]}
                         className='swiper-styles'
                     >
                         <SwiperSlide>
                             <C.slide>
-                                <img src={cert1} alt="" width={350} className='imagi'/>
-                                    <C.ss>B7web</C.ss>
+                                <img src={cert1} alt="" width={350} className='imagi' />
+                                <C.ss>B7web</C.ss>
                                 <C.detalh>
                                     <C.h3 className='git'>Git/GitHub</C.h3>
                                 </C.detalh>
@@ -242,7 +240,7 @@ export const Main: React.FC<Types> = ({prop , sobree , portifolio})=>{
                         </SwiperSlide>
                         <SwiperSlide>
                             <C.slide>
-                                <img src={cert2} alt="" width={350} className='imagi'/>
+                                <img src={cert2} alt="" width={350} className='imagi' />
                                 <C.detalh>
                                     <C.ss>B7web</C.ss>
                                     <C.h3 className='html'>HTML</C.h3>
@@ -252,7 +250,7 @@ export const Main: React.FC<Types> = ({prop , sobree , portifolio})=>{
                         </SwiperSlide>
                         <SwiperSlide>
                             <C.slide>
-                                <img src={cert3} alt="" width={350} className='imagi'/>
+                                <img src={cert3} alt="" width={350} className='imagi' />
                                 <C.detalh>
                                     <C.ss>B7web</C.ss>
                                     <C.h3 className='java'>JavaScript</C.h3>
@@ -261,7 +259,7 @@ export const Main: React.FC<Types> = ({prop , sobree , portifolio})=>{
                         </SwiperSlide>
                         <SwiperSlide>
                             <C.slide>
-                                <img src={cert4} alt="" width={350} className='imagi'/>
+                                <img src={cert4} alt="" width={350} className='imagi' />
                                 <C.detalh>
                                     <C.ss>B7web</C.ss>
                                     <C.h3 className='type'>TypeScript</C.h3>
@@ -270,7 +268,7 @@ export const Main: React.FC<Types> = ({prop , sobree , portifolio})=>{
                         </SwiperSlide>
                         <SwiperSlide>
                             <C.slide>
-                                <img src={cert5} alt="" width={350} className='imagi'/>
+                                <img src={cert5} alt="" width={350} className='imagi' />
                                 <C.detalh>
                                     <C.ss>B7web</C.ss>
                                     <C.h3 className='react'>ReactJs</C.h3>
@@ -279,7 +277,7 @@ export const Main: React.FC<Types> = ({prop , sobree , portifolio})=>{
                         </SwiperSlide>
                         <SwiperSlide>
                             <C.slide>
-                                <img src={cert6} alt="" width={350} className='imagi'/>
+                                <img src={cert6} alt="" width={350} className='imagi' />
                                 <C.detalh>
                                     <C.ss>B7web</C.ss>
                                     <C.h3 className='taiCSS'>TailwindCSS</C.h3>
@@ -288,7 +286,7 @@ export const Main: React.FC<Types> = ({prop , sobree , portifolio})=>{
                         </SwiperSlide>
                         <SwiperSlide>
                             <C.slide>
-                                <img src={cert7} alt="" width={350} className='imagi'/>
+                                <img src={cert7} alt="" width={350} className='imagi' />
                                 <C.detalh>
                                     <C.ss>Danki Code</C.ss>
                                     <C.h3 className='java'>JavaScript</C.h3>
@@ -298,16 +296,13 @@ export const Main: React.FC<Types> = ({prop , sobree , portifolio})=>{
                     </Swiper>
                 </C.carrosel>
             </C.certificados>
-                
-            </Element>
+
             <C.Container>
-              
+
                 <C.subiContainer>
-                    <Element name='portifolio'>
-                        <C.h1>Portfolio</C.h1>
-                    </Element>
+                    <C.h1>Portfolio</C.h1>
                     <hr />
-                     
+
                     <C.portifolios ref={portifo}>
                         <C.porti>
                             <img src={img1} className='img1' alt="" />
@@ -318,7 +313,7 @@ export const Main: React.FC<Types> = ({prop , sobree , portifolio})=>{
                                     Com a opção de escolher a dificudade e armazenar seu record.
                                 </C.spp>
 
-                                    <C.titulo>Tecnologias Utilizadas</C.titulo>
+                                <C.titulo>Tecnologias Utilizadas</C.titulo>
                                 <C.texUse>
                                     <img src={html} alt="" width={50} />
                                     <img src={javaScript} alt="" width={50} />
@@ -327,7 +322,7 @@ export const Main: React.FC<Types> = ({prop , sobree , portifolio})=>{
                                 <C.linkProjeto href='https://jogo1-0-alexcarneiroo.vercel.app/' target='_blank'>
                                     <C.irProject className='btnEfeito'>
                                         Ver Projeto
-                                        <FaShare className='incone'/>
+                                        <FaShare className='incone' />
                                     </C.irProject>
                                 </C.linkProjeto>
 
@@ -338,36 +333,36 @@ export const Main: React.FC<Types> = ({prop , sobree , portifolio})=>{
                     <hr />
                     <C.portifolios>
                         <C.porti>
-                            
+
                             <C.optios>
                                 <C.titulo>Calculadora de IMC</C.titulo>
                                 <C.spp>
-                                Criei Esse Projetinho de Player de musica para praticar meus conhecimento em JavaScrip , Esse Projeto tem a Funcionalidade Adicionar musica , Pausar , Aumentar e Abaixar Volume e Escutar a musica Claro kkk
+                                    Criei Esse Projetinho de Player de musica para praticar meus conhecimento em JavaScrip , Esse Projeto tem a Funcionalidade Adicionar musica , Pausar , Aumentar e Abaixar Volume e Escutar a musica Claro kkk
                                 </C.spp>
 
-                                    <C.titulo>Tecnologias Utilizadas</C.titulo>
+                                <C.titulo>Tecnologias Utilizadas</C.titulo>
                                 <C.texUse>
                                     <img src={html} alt="" width={50} />
-                                    <img src={javaScript} alt="" width={50}/>
+                                    <img src={javaScript} alt="" width={50} />
                                 </C.texUse>
 
 
                                 <C.linkProjeto href='https://reprodutor-music.vercel.app/' target='_blank'>
                                     <C.irProject className='btnEfeito'>
-                                        Ver Projeto   
-                                        <FaShare className='incone'/>
+                                        Ver Projeto
+                                        <FaShare className='incone' />
                                     </C.irProject>
                                 </C.linkProjeto>
 
                             </C.optios>
-                                <img  src={playerMusic} className='img1' alt="" />
+                            <img src={playerMusic} className='img1' alt="" />
                         </C.porti>
                     </C.portifolios>
 
                     <hr />
                     <C.portifolios>
                         <C.porti>
-                            <img  src={pomodoro} className='img1' alt="" />
+                            <img src={pomodoro} className='img1' alt="" />
 
                             <C.optios>
                                 <C.titulo>Pomodoro Timer</C.titulo>
@@ -377,7 +372,7 @@ export const Main: React.FC<Types> = ({prop , sobree , portifolio})=>{
                                     Feito com HTML e CSS E JAVASCRIPT!!!
                                 </C.spp>
 
-                                    <C.titulo>Tecnologias Utilizadas</C.titulo>
+                                <C.titulo>Tecnologias Utilizadas</C.titulo>
                                 <C.texUse>
                                     <img src={html} alt="" width={50} />
                                     <img src={javaScript} alt="" width={50} />
@@ -386,149 +381,149 @@ export const Main: React.FC<Types> = ({prop , sobree , portifolio})=>{
                                 <C.linkProjeto href='https://pomodoro-js-opal.vercel.app/' target='_blank'>
                                     <C.irProject className='btnEfeito'>
                                         Ver Projeto
-                                        
-                                        <FaShare className='incone'/>
+
+                                        <FaShare className='incone' />
                                     </C.irProject>
                                 </C.linkProjeto>
 
                             </C.optios>
                         </C.porti>
                     </C.portifolios>
-                    
-                    {!verMais && 
-                    
-                        <C.vermais onClick={handlClick}>Ver Mais  <FaAngleDown/></C.vermais>
+
+                    {!verMais &&
+
+                        <C.vermais onClick={handlClick}>Ver Mais  <FaAngleDown /></C.vermais>
                     }
-                    
-                    
+
+
                     {verMais &&
-                    <>
-                    <hr />                 
-                        <C.portifolios>
-                            <C.porti>
-                                <C.optios>
-                                    <C.titulo>Cronometro Moderno</C.titulo>
-                                    <C.spp>
-                                        Esse é um projeto de cronometro moderno e simples de usar bom para fazer um Pomodoro ou algo do tipo
-                                        <br />
-                                        Feito com HTML e CSS E JAVASCRIPT!!!
-                                    </C.spp>
-                                            <C.titulo>Tecnologias Utilizadas</C.titulo>
-                                    <C.texUse>
-                                        <img src={html} alt="" width={50} />
-                                        <img src={javaScript} alt="" width={50} />
-                                    </C.texUse>
+                        <>
+                            <hr />
+                            <C.portifolios>
+                                <C.porti>
+                                    <C.optios>
+                                        <C.titulo>Cronometro Moderno</C.titulo>
+                                        <C.spp>
+                                            Esse é um projeto de cronometro moderno e simples de usar bom para fazer um Pomodoro ou algo do tipo
+                                            <br />
+                                            Feito com HTML e CSS E JAVASCRIPT!!!
+                                        </C.spp>
+                                        <C.titulo>Tecnologias Utilizadas</C.titulo>
+                                        <C.texUse>
+                                            <img src={html} alt="" width={50} />
+                                            <img src={javaScript} alt="" width={50} />
+                                        </C.texUse>
 
-                                    <C.linkProjeto href="https://cronometroomoderno.netlify.app/" target='_black'>
-                                        <C.irProject className='btnEfeito'>
-                                            Ver Projeto 
-                                            <FaShare className='incone'/>
-                                        </C.irProject>
-                                    </C.linkProjeto>
+                                        <C.linkProjeto href="https://cronometroomoderno.netlify.app/" target='_black'>
+                                            <C.irProject className='btnEfeito'>
+                                                Ver Projeto
+                                                <FaShare className='incone' />
+                                            </C.irProject>
+                                        </C.linkProjeto>
 
-                                </C.optios>
-                                <img  src={cronometro} className='img1' alt="" />
-                            </C.porti>
-                        </C.portifolios>                    
-                    <hr />                 
-                        <C.portifolios>
-                            <C.porti>
-                                <C.optios>
-                                    <C.titulo>Catalogo de Filmes Lançamentos</C.titulo>
-                                    <C.spp>
-                                        Um Projeto que Pega Todos Filmes Lançado Atualmente utilizando uma API Desenvolvido com ReactJs e TypeScript
-                                    </C.spp>
-                                            <C.titulo>Tecnologias Utilizadas</C.titulo>
-                                    <C.texUse>
-                                        <img src={react} alt="" width={50} />
-                                        <img src={ty} alt="" width={50} />
+                                    </C.optios>
+                                    <img src={cronometro} className='img1' alt="" />
+                                </C.porti>
+                            </C.portifolios>
+                            <hr />
+                            <C.portifolios>
+                                <C.porti>
+                                    <C.optios>
+                                        <C.titulo>Catalogo de Filmes Lançamentos</C.titulo>
+                                        <C.spp>
+                                            Um Projeto que Pega Todos Filmes Lançado Atualmente utilizando uma API Desenvolvido com ReactJs e TypeScript
+                                        </C.spp>
+                                        <C.titulo>Tecnologias Utilizadas</C.titulo>
+                                        <C.texUse>
+                                            <img src={react} alt="" width={50} />
+                                            <img src={ty} alt="" width={50} />
 
-                                    </C.texUse>
+                                        </C.texUse>
 
-                                    <C.linkProjeto href="https://catalogo-filmes-react-js-api.vercel.app/" target='_black'>
-                                        <C.irProject className='btnEfeito'>
-                                            Ver Projeto 
-                                            <FaShare className='incone'/>
-                                        </C.irProject>
-                                    </C.linkProjeto>
+                                        <C.linkProjeto href="https://catalogo-filmes-react-js-api.vercel.app/" target='_black'>
+                                            <C.irProject className='btnEfeito'>
+                                                Ver Projeto
+                                                <FaShare className='incone' />
+                                            </C.irProject>
+                                        </C.linkProjeto>
 
-                                </C.optios>
-                                <img  src={catalogo} className='imgCatalogo' alt=""  />
-                            </C.porti>
-                        </C.portifolios>                    
-                
-                    <hr />
-                    <C.portifolios>
-                        <C.porti>
-                            <img  src={imageProgetojogo} className='img1' alt="" />
+                                    </C.optios>
+                                    <img src={catalogo} className='imgCatalogo' alt="" />
+                                </C.porti>
+                            </C.portifolios>
 
-                            <C.optios>
-                                <C.titulo>Pedra Papel Tesoura JS</C.titulo>
-                                <C.spp>
-                                    Um Joguinho Classico De Pedra Papel e Tesoura Simples Mais Com Muita Logica!!!
-                                    <br />
-                                    Feito com HTML e CSS E JAVASCRIPT!!!
-                                </C.spp>
+                            <hr />
+                            <C.portifolios>
+                                <C.porti>
+                                    <img src={imageProgetojogo} className='img1' alt="" />
 
-                                    <C.titulo>Tecnologias Utilizadas</C.titulo>
-                                <C.texUse>
-                                    <img src={html} alt="" width={50} />
-                                    <img src={javaScript} alt="" width={50} />
-                                </C.texUse>
+                                    <C.optios>
+                                        <C.titulo>Pedra Papel Tesoura JS</C.titulo>
+                                        <C.spp>
+                                            Um Joguinho Classico De Pedra Papel e Tesoura Simples Mais Com Muita Logica!!!
+                                            <br />
+                                            Feito com HTML e CSS E JAVASCRIPT!!!
+                                        </C.spp>
 
-                                <C.linkProjeto href='https://pedra-papel-tesoura-seven.vercel.app/' target='_blank'>
-                                    <C.irProject className='btnEfeito'>
-                                        Ver Projeto
-                                        
-                                        <FaShare className='incone'/>
-                                    </C.irProject>
-                                </C.linkProjeto>
+                                        <C.titulo>Tecnologias Utilizadas</C.titulo>
+                                        <C.texUse>
+                                            <img src={html} alt="" width={50} />
+                                            <img src={javaScript} alt="" width={50} />
+                                        </C.texUse>
 
-                            </C.optios>
-                        </C.porti>
-                    </C.portifolios>
-                    <hr />
-                    <C.portifolios>
-                        <C.porti>
-                            
-                            <C.optios>
-                                <C.titulo>Calculadora de IMC</C.titulo>
-                                <C.spp>
+                                        <C.linkProjeto href='https://pedra-papel-tesoura-seven.vercel.app/' target='_blank'>
+                                            <C.irProject className='btnEfeito'>
+                                                Ver Projeto
 
-                                    Por favor, insira seu peso em quilogramas: 70
-                                    Agora, insira sua altura em metros: 1.75
-                                    Calculando...
+                                                <FaShare className='incone' />
+                                            </C.irProject>
+                                        </C.linkProjeto>
 
-                                    Seu IMC é: 22.86
+                                    </C.optios>
+                                </C.porti>
+                            </C.portifolios>
+                            <hr />
+                            <C.portifolios>
+                                <C.porti>
 
-                                    De acordo com o IMC, você está na faixa de peso considerada saudável.
+                                    <C.optios>
+                                        <C.titulo>Calculadora de IMC</C.titulo>
+                                        <C.spp>
 
-                                    Lembrando que o IMC é uma medida simples, mas não leva em consideração outros fatores como a composição corporal e a distribuição de gordura. Consulte um profissional de saúde para uma avaliação mais completa.
+                                            Por favor, insira seu peso em quilogramas: 70
+                                            Agora, insira sua altura em metros: 1.75
+                                            Calculando...
 
-                                </C.spp>
+                                            Seu IMC é: 22.86
 
-                                    <C.titulo>Tecnologias Utilizadas</C.titulo>
-                                <C.texUse>
-                                    <img src={react} alt="" width={50} />
-                                    <img src={ty} alt="" width={50} />
-                                    <img src={javaScript} alt="" width={50}/>
-                                </C.texUse>
+                                            De acordo com o IMC, você está na faixa de peso considerada saudável.
+
+                                            Lembrando que o IMC é uma medida simples, mas não leva em consideração outros fatores como a composição corporal e a distribuição de gordura. Consulte um profissional de saúde para uma avaliação mais completa.
+
+                                        </C.spp>
+
+                                        <C.titulo>Tecnologias Utilizadas</C.titulo>
+                                        <C.texUse>
+                                            <img src={react} alt="" width={50} />
+                                            <img src={ty} alt="" width={50} />
+                                            <img src={javaScript} alt="" width={50} />
+                                        </C.texUse>
 
 
-                                <C.linkProjeto href='https://calculadoradeimc-gamma.vercel.app/' target='_blank'>
-                                    <C.irProject className='btnEfeito'>
-                                        Ver Projeto   
-                                        <FaShare className='incone'/>
-                                    </C.irProject>
-                                </C.linkProjeto>
+                                        <C.linkProjeto href='https://calculadoradeimc-gamma.vercel.app/' target='_blank'>
+                                            <C.irProject className='btnEfeito'>
+                                                Ver Projeto
+                                                <FaShare className='incone' />
+                                            </C.irProject>
+                                        </C.linkProjeto>
 
-                            </C.optios>
-                                <img  src={img2Imc} className='img1' alt="" />
-                        </C.porti>
-                    </C.portifolios>
-                </>
+                                    </C.optios>
+                                    <img src={img2Imc} className='img1' alt="" />
+                                </C.porti>
+                            </C.portifolios>
+                        </>
 
-                }
+                    }
                 </C.subiContainer>
             </C.Container>
         </C.main>
