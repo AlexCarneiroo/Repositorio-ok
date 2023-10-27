@@ -57,6 +57,7 @@ export const span = styled.span`
     font-size: 1rem;
     color: #263238;
     font-weight: 400;
+    line-height: 24px;
 `;
 export const p = styled.p`
     font-size: .9rem;
@@ -67,7 +68,7 @@ export const p = styled.p`
 export const bold = styled.span`
     font-weight: bold;
 `;
-export const link = styled.span`
+export const link = styled.a`
     font-weight: bold;
     color:#263238 ;
 
@@ -101,11 +102,29 @@ export const redes = styled.div`
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    margin: 20px 0;
+`;
+
+export const tecConte = styled.div`
+    width: 100%;
+    max-width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 35px 0;
+
+`;
+
+export const nameTec = styled.span`
+    font-size: .9rem;
+    font-weight: 600;
+    color: #263238;
 `;
 
 export const tecImg = styled.img`
     transition: .2s ease-in;
-    margin: 10px 0 40px;
+    margin-bottom: 5px;
 
     @media (max-width:750px) {
         margin: 10px 20px;
@@ -187,6 +206,7 @@ export const detalhes = styled.span`
     color:#424242 ;
     font-size: .9rem;
     margin-left: 5px;
+    line-height: 25px;
 `;
 
 export const BtnVoltar = styled.button`

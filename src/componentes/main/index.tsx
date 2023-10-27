@@ -1,4 +1,5 @@
 import * as C from '../main/style'
+import {useRef} from 'react'
 import { Link, Element } from 'react-scroll';
 import {FaChevronUp , FaShare , FaAngleDown} from 'react-icons/fa'
 // Carrosel
@@ -15,13 +16,14 @@ import { Pagination , Navigation } from 'swiper/modules';
 
 
 // Tecnologia
+import nodejs from '../../logos e imgs/tecnologias/nodejs.jpg'
 import uselogo from '../../logos e imgs/Designer _Flatline.png'
 import useimg from '../../logos e imgs/Sending emails_Monochromatic.png'
 import git from '../../logos e imgs/tecnologias/git.jpg'
 import javaScript from '../../logos e imgs/tecnologias/javascript.jpg'
 import react from '../../logos e imgs/tecnologias/reactjs.jpg'
 import ty from '../../logos e imgs/tecnologias/typescript.jpg'
-import do1 from '../../logos e imgs/tecnologias/download (2).png'
+import do1 from '../../logos e imgs/tecnologias/powered-by-mysql-167x86.png'
 import do2 from '../../logos e imgs/tecnologias/download.png'
 import html from '../../logos e imgs/tecnologias/html5-e-css3.jpg'
 import gitHub from '../../logos e imgs/tecnologias/download (1).png'
@@ -46,11 +48,20 @@ import imageProgetojogo from '../../logos e imgs/imgs de projetos/JogoPPT.png'
 import cronometro from '../../logos e imgs/imgs de projetos/cronometro.png'
 import catalogo from '../../logos e imgs/imgs de projetos/catalogo.png'
 import pomodoro from '../../logos e imgs/imgs de projetos/imgPomodoro.png'
+import playerMusic from '../../logos e imgs/imgs de projetos/screencapture-reprodutor-music-vercel-app-2023-10-23-07_03_54.png'
 
 
 import { useEffect , useState } from 'react';
 
-export const Main = ()=>{
+interface Types {
+    prop?:any,
+    sobree?: any,
+    portifolio?:any
+}
+
+export const Main: React.FC<Types> = ({prop , sobree , portifolio})=>{
+
+
 
     const [verMais , setVermais] = useState(false)
 
@@ -72,18 +83,48 @@ export const Main = ()=>{
             window.removeEventListener('scroll', handlScrool)
         }
 
+        
+
     },[])
+
+    const handlVoltarTop = ()=>{
+        window.scroll({
+            top:0,
+            behavior:'smooth'
+        })
+    }
+
+
+
+    
+    const certiEvent = useRef<HTMLDivElement>(null)
+    const elemento = useRef<HTMLDivElement>(null)
+    const portifo = useRef<HTMLDivElement>(null)
+    
+    useEffect(()=>{
+        prop(certiEvent)
+        sobree(elemento)
+        portifolio(portifo)
+    },[])
+    const handlSobreMin = ()=>{
+        if (elemento.current){
+            const offsetTop = elemento.current.offsetTop;
+            window.scroll({
+                top: offsetTop - 30,
+                behavior: 'smooth'
+            });
+        }
+    }
+    
 
  
 
     return(
         <C.main>
             {isScrrol &&
-                <Link to="voltar">
-                    <C.BtnVoltar>
-                        <FaChevronUp/>
-                    </C.BtnVoltar>
-                </Link>
+                <C.BtnVoltar onClick={handlVoltarTop}>
+                    <FaChevronUp/>
+                </C.BtnVoltar>
             }
             <Element name="voltar">
                 <C.Container>
@@ -93,7 +134,7 @@ export const Main = ()=>{
                         <br />
                         <br />
                         <C.span>Sou Desenvolvedor Front-End A 1 Ano e Meio E Tenho Conhecimentos em <C.bold>JavaScript , ReactJs , TypeScript e NodeJs</C.bold> e Algumas Bibliotecas...</C.span>
-                        <C.p>Venha Conhecer Mais <C.link><Link to="parte">Sobre Min...</Link></C.link></C.p>
+                        <C.p>Venha Conhecer Mais <C.link onClick={handlSobreMin}>Sobre Min...</C.link></C.p>
                     </C.HomeLeft>
                     <C.HomeRight>
                         <C.img src={uselogo} alt="" width={400}/>
@@ -102,23 +143,61 @@ export const Main = ()=>{
             </Element>
 
             <C.redes>
-                <C.tecImg src={javaScript} alt="" width={55}/>
+                <C.tecConte>
+                    <C.tecImg src={javaScript} alt="" width={55}/>
+                    <C.nameTec>JavaScript</C.nameTec>
+                </C.tecConte>
+                <C.tecConte>
+                    <C.tecImg src={nodejs} alt='image' width={55}/>
+                    <C.nameTec>NodeJs</C.nameTec>
+                </C.tecConte>
+                <C.tecConte>
                 <C.tecImg src={git} alt="" width={55}/>
-                <C.tecImg src={ty} alt="" width={55}/>
-                <C.tecImg src={html} alt="" width={55}/>
-                <C.tecImg src={do1} alt="" width={70}/>
+                    <C.nameTec>Git</C.nameTec>
+                </C.tecConte>
+                <C.tecConte>
+                    <C.tecImg src={ty} alt="" width={55}/>
+                    <C.nameTec>TypeScript</C.nameTec>
+                </C.tecConte>
+                <C.tecConte>
+                    <C.tecImg src={html} alt="" width={55}/>
+                    <C.nameTec>HTML-CSS</C.nameTec>
+                </C.tecConte>
+                <C.tecConte>
+                    <C.tecImg src={do1} alt="" width={70}/>
+                    <C.nameTec>MySQL</C.nameTec>
+                </C.tecConte>
+                <C.tecConte>
+
                 <C.tecImg src={do2} alt="" width={55}/>
-                <C.tecImg src={react} alt="" width={55}/>
-                <C.tecImg src={gitHub} alt="" width={55}/>
-                <C.tecImg src={taiw} alt="" width={55}/>
-                <C.tecImg src={rails} alt="" width={55}/>
-                <C.tecImg src={ruby} alt="" width={55}/>
+                    <C.nameTec>Styled-Componets</C.nameTec>
+                </C.tecConte>
+                <C.tecConte>
+                    <C.tecImg src={react} alt="" width={55}/>
+                    <C.nameTec>React</C.nameTec>
+                </C.tecConte>
+                <C.tecConte>
+                    <C.tecImg src={gitHub} alt="" width={55}/>
+                    <C.nameTec>gitHub</C.nameTec>
+                </C.tecConte>
+                <C.tecConte>
+                    <C.tecImg src={taiw} alt="" width={55}/>
+                    <C.nameTec>Tailwind CSS</C.nameTec>
+                </C.tecConte>
+                <C.tecConte>
+                    <C.tecImg src={rails} alt="" width={55}/>
+                    <C.nameTec>Rails</C.nameTec>
+                </C.tecConte>
+                <C.tecConte>
+                    <C.tecImg src={ruby} alt="" width={55}/>
+                    <C.nameTec>Ruby</C.nameTec>
+                </C.tecConte>
+                  
             </C.redes>
 
             <C.Container>
 
-                    <C.contraContainer>
-                        <Element name="parte">
+                    <C.contraContainer ref={elemento} id='sobremin'>
                             <C.h1>Sobre mim</C.h1>
                             <hr />
                             <C.divisao>
@@ -134,14 +213,13 @@ export const Main = ()=>{
                                     <C.detalhes>Tenho Conhecimento Avançado na Lingua JavaScript e Ruby, e em liguagem de leituras HTML5 e CSS , alguns framework como ReactJs e Rail , Tenho conhecimento em TypeScript e outras Bibliotecas , Cursei na empresa B7web e na Danki Code...</C.detalhes>
                                 </C.sobreRight>
                             </C.divisao>
-                        </Element>
                     </C.contraContainer>
             </C.Container>
 
             
 
             <Element name='certificado'>
-            <C.certificados>
+            <C.certificados ref={certiEvent}>
                 <C.h1>Certificações</C.h1>
                 <hr />
                 <C.carrosel>
@@ -230,7 +308,7 @@ export const Main = ()=>{
                     </Element>
                     <hr />
                      
-                    <C.portifolios>
+                    <C.portifolios ref={portifo}>
                         <C.porti>
                             <img src={img1} className='img1' alt="" />
                             <C.optios>
@@ -264,28 +342,17 @@ export const Main = ()=>{
                             <C.optios>
                                 <C.titulo>Calculadora de IMC</C.titulo>
                                 <C.spp>
-
-                                    Por favor, insira seu peso em quilogramas: 70
-                                    Agora, insira sua altura em metros: 1.75
-                                    Calculando...
-
-                                    Seu IMC é: 22.86
-
-                                    De acordo com o IMC, você está na faixa de peso considerada saudável.
-
-                                    Lembrando que o IMC é uma medida simples, mas não leva em consideração outros fatores como a composição corporal e a distribuição de gordura. Consulte um profissional de saúde para uma avaliação mais completa.
-
+                                Criei Esse Projetinho de Player de musica para praticar meus conhecimento em JavaScrip , Esse Projeto tem a Funcionalidade Adicionar musica , Pausar , Aumentar e Abaixar Volume e Escutar a musica Claro kkk
                                 </C.spp>
 
                                     <C.titulo>Tecnologias Utilizadas</C.titulo>
                                 <C.texUse>
-                                    <img src={react} alt="" width={50} />
-                                    <img src={ty} alt="" width={50} />
+                                    <img src={html} alt="" width={50} />
                                     <img src={javaScript} alt="" width={50}/>
                                 </C.texUse>
 
 
-                                <C.linkProjeto href='https://calculadoradeimc-gamma.vercel.app/' target='_blank'>
+                                <C.linkProjeto href='https://reprodutor-music.vercel.app/' target='_blank'>
                                     <C.irProject className='btnEfeito'>
                                         Ver Projeto   
                                         <FaShare className='incone'/>
@@ -293,9 +360,10 @@ export const Main = ()=>{
                                 </C.linkProjeto>
 
                             </C.optios>
-                                <img  src={img2Imc} className='img1' alt="" />
+                                <img  src={playerMusic} className='img1' alt="" />
                         </C.porti>
                     </C.portifolios>
+
                     <hr />
                     <C.portifolios>
                         <C.porti>
@@ -417,6 +485,45 @@ export const Main = ()=>{
                                 </C.linkProjeto>
 
                             </C.optios>
+                        </C.porti>
+                    </C.portifolios>
+                    <hr />
+                    <C.portifolios>
+                        <C.porti>
+                            
+                            <C.optios>
+                                <C.titulo>Calculadora de IMC</C.titulo>
+                                <C.spp>
+
+                                    Por favor, insira seu peso em quilogramas: 70
+                                    Agora, insira sua altura em metros: 1.75
+                                    Calculando...
+
+                                    Seu IMC é: 22.86
+
+                                    De acordo com o IMC, você está na faixa de peso considerada saudável.
+
+                                    Lembrando que o IMC é uma medida simples, mas não leva em consideração outros fatores como a composição corporal e a distribuição de gordura. Consulte um profissional de saúde para uma avaliação mais completa.
+
+                                </C.spp>
+
+                                    <C.titulo>Tecnologias Utilizadas</C.titulo>
+                                <C.texUse>
+                                    <img src={react} alt="" width={50} />
+                                    <img src={ty} alt="" width={50} />
+                                    <img src={javaScript} alt="" width={50}/>
+                                </C.texUse>
+
+
+                                <C.linkProjeto href='https://calculadoradeimc-gamma.vercel.app/' target='_blank'>
+                                    <C.irProject className='btnEfeito'>
+                                        Ver Projeto   
+                                        <FaShare className='incone'/>
+                                    </C.irProject>
+                                </C.linkProjeto>
+
+                            </C.optios>
+                                <img  src={img2Imc} className='img1' alt="" />
                         </C.porti>
                     </C.portifolios>
                 </>

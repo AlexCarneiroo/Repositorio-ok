@@ -5,8 +5,13 @@ import {FaLinkedinIn , FaGithub,FaWhatsapp } from "react-icons/fa";
 import './navbar.css';
 import {Link}  from 'react-scroll';
 
+interface Types {
+    teste?:any,
+    sob?: any,
+    port?:any
+}
 
-export const Headers =()=>{
+export const Headers:React.FC<Types> =({teste , sob , port})=>{
 
 
     const [menu,setMenu] = useState(false)
@@ -43,10 +48,9 @@ export const Headers =()=>{
             </C.name>
             <C.menu>
                 <C.a>Home</C.a>
-                <Link to={'parte'}><C.a>Sobre Min</C.a></Link>
-                <Link to='certificado'><C.a>Certificaçoes</C.a></Link>
-                <Link to='portifolio'><C.a>Portifolios</C.a></Link>
-                
+                <C.a onClick={sob}>Sobre Min</C.a>
+                <C.a onClick={teste}>Certificaçoes</C.a>
+                <C.a onClick={port}>Portifolios</C.a>
             </C.menu>
 
             <C.redes>
@@ -67,11 +71,11 @@ export const Headers =()=>{
                 <C.menuRespomRedes $respom={menu}>
                     <C.b>Home</C.b>
                     <br />
-                    <Link to={'parte'}><C.b>Sobre Min</C.b></Link>
+                    <C.b onClick={sob}>Sobre Min</C.b>
                     <br />
-                    <Link to='certificado'><C.b>Certificaçoes</C.b></Link>
+                    <C.b onClick={teste}>Certificaçoes</C.b>
                     <br />
-                    <Link to='portifolio'><C.b>Portifolios</C.b></Link>
+                    <C.b onClick={port}>Portifolios</C.b>
                 </C.menuRespomRedes>
         </C.container>
 

@@ -131,7 +131,7 @@ export const menuRespomRedes = styled.div<{$respom?:boolean}>`
     padding: ${props => props.$respom ? '10px' : '0px'};
     align-items:center;
     position: absolute;
-    top: 50px;
+    top: 43px;
     font-family: 'Montserrat';
     display: flex;
     transition: all .3s ease-in-out;
