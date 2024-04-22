@@ -131,7 +131,6 @@ export const Main: React.FC<Types> = ({ prop, sobree, portifolio }) => {
                     <C.title>Desenvolvedor Front-End...</C.title>
                     <C.span>Olá eu Sou O <C.bold>Alex Dos Santos Carneiro</C.bold> e Esse é o meu Portfolio Seja Muito Bem Vindo...</C.span>
                     <br />
-                    <br />
                     <C.span>Sou Desenvolvedor Front-End A 1 Ano e Meio E Tenho Conhecimentos em <C.bold>JavaScript , ReactJs , TypeScript e NodeJs</C.bold> e Algumas Bibliotecas...</C.span>
                     <C.p>Venha Conhecer Mais <C.link onClick={handlSobreMin}>Sobre Min...</C.link></C.p>
                 </C.HomeLeft>
@@ -335,7 +334,7 @@ export const Main: React.FC<Types> = ({ prop, sobree, portifolio }) => {
                         <C.porti>
 
                             <C.optios>
-                                <C.titulo>Calculadora de IMC</C.titulo>
+                                <C.titulo>Player de Musica</C.titulo>
                                 <C.spp>
                                     Criei Esse Projetinho de Player de musica para praticar meus conhecimento em JavaScrip , Esse Projeto tem a Funcionalidade Adicionar musica , Pausar , Aumentar e Abaixar Volume e Escutar a musica Claro kkk
                                 </C.spp>
